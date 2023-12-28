@@ -41,14 +41,15 @@ h1 {
 }
 
 .box {
-  font-size: 300%;
+  font-size: 3rem;
   /* width: 150px;
   height: 150px; */
-  /* width: 12vw;
-  height: 22vh; */
-  width: 85%;
-  height: 90%;
+  width: 9vw;
+  height: 16vh;
+  /* width: 80%;
+  height: 90%; */
   background-color: #FF6978;
+  color: black;
   /* background-color: #ECA400; */
   border: none;
   /* border-radius: 10px; */
