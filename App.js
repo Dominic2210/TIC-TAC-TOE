@@ -3,6 +3,7 @@ let reset_btn = document.querySelector("#reset");
 let msgContainer = document.querySelector(".msg-container");
 let message = document.querySelector("#msg");
 let new_btn = document.querySelector(".new");
+let headings = document.querySelector(".head-container");
 
 let turnX = true;
 const winPatterns = [
@@ -34,17 +35,17 @@ const resetGame = () => {
   msgContainer.classList.add("visibility");
   new_btn.classList.add("visibility");
   reset_btn.classList.remove("visibility");
+  headings.classList.remove("visibility")
 };
 // Second method
 // const resetGame = () => {
-  // boxes.forEach((box) => {
-    //   enableBoxes();
-    //   msgContainer.classList.add("visibility");
-    //   new_btn.classList.add("visibility");
-    //   reset_btn.classList.remove("visibility");
-    // })
+// boxes.forEach((box) => {
+//   enableBoxes();
+//   msgContainer.classList.add("visibility");
+//   new_btn.classList.add("visibility");
+//   reset_btn.classList.remove("visibility");
+// })
 // };
-
 
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
@@ -66,6 +67,7 @@ const showWinner = (winner) => {
   msgContainer.classList.remove("visibility");
   new_btn.classList.remove("visibility");
   reset_btn.classList.add("visibility");
+  headings.classList.add("visibility")
   disableBoxes();
 };
 

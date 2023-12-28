@@ -4,12 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>TIC-TAC-TOE</title>
 </head>
 <body>
   <main>
-    <h1>WELCOME TO THE GAME</h1>
+    <h1 class="game-head">WELCOME TO THE GAME!</h1>
+
+    <div class="head-container">
+      <h2>( Player 1 : 'X'</h2> <span>;</span><h2>Player 2 : 'O' )</h2>
+    </div>
 
     <div class="msg-container visibility">
       <p id="msg"></p>
@@ -18,21 +25,46 @@
     <div class="game_container">
 
       <div class="game_box">
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
+        <button class="box click"></button>
+        <button class="box click"></button>
+        <button class="box click"></button>
+        <button class="box click"></button>
+        <button class="box click"></button>
+        <button class="box click"></button>
+        <button class="box click"></button>
+        <button class="box click"></button>
+        <button class="box click"></button>
       </div>
 
       <div class="button-container">
-        <button id="reset">Reset Game</button>
-        <button class="new visibility">New Game</button>
+        <button id="reset" class="click">Reset Game</button>
+        <button class="new visibility click">New Game</button>
       </div>
+    </div>
+
+    <hr class="custom-hr">
+
+    <div class="rules-container">
+
+      <div class="rule-box">
+        <h1 class="rule-head">Objective: </h1>
+        <li>The goal of the game is to be the first player to form a horizontal, vertical, or diagonal line of three of their symbols (X or O) on the 3x3 grid.</li>
+         <h3>RULES :</h3>
+          <li>Decide which player will be X and which will be O.</li>
+          <li>Players take turns placing their symbol (X or O) on an empty spot on the grid.</li>
+          <li>The first player (X) makes the initial move.</li>
+          <li>A player wins by having three of their symbols in a row horizontally, vertically, or diagonally.</li>
+          <li>If the entire grid is filled without a winner, the game is a draw.</li>
+          <li>Players must make a move during their turn; no skipping turns is allowed.</li>
+          <li>Once a player makes a move, it cannot be changed.</li>
+          <li>Players cannot place their symbol on a position that is already occupied by their opponent's symbol or their own.</li>
+          <li>The game ends when a player wins or when all positions on the grid are filled (resulting in a draw).</li>
+          <li>If a player achieves three in a row, their victory is announced, and the game concludes.</li>
+          <li>After the game ends, players can choose to play again or reset the grid for a new match.</li>
+          <li>Sportsmanship is encouraged, and players should congratulate the winner or acknowledge a draw.</li>
+        
+      </div>
+
     </div>
 
   </main>
