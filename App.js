@@ -23,5 +23,24 @@ boxes.forEach((box) => {
       turnX = true;
     }
     box.disabled = true;
+    checkWinner();
   });
 });
+
+const checkWinner = () => {
+  for (pattern of winPatterns) {
+    // console.log(pattern); // Accessing each pattern
+    // console.log(pattern[0], pattern[1], pattern[2]); Accessing individual indexes of the pattern
+    // console.log(boxes[pattern[0]], boxes[pattern[1]], boxes[pattern[2]]); Mapping each button with the indexs
+    // console.log(boxes[pattern[0]].innerText, boxes[pattern[1]].innerText, boxes[pattern[2]].innerText);Accessing the button's text at that position
+    let pos1Val = boxes[pattern[0]].innerText;
+    let pos2Val = boxes[pattern[1]].innerText;
+    let pos3Val = boxes[pattern[2]].innerText;
+
+    if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
+      if (pos1Val === pos2Val && pos2Val === pos3Val && pos1Val === pos3Val) {
+        console.log("Winner");
+      }
+    }
+  }
+};
